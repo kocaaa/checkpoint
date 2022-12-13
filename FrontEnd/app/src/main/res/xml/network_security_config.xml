@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+
+<!--        server-->
+        <domain includeSubdomains="true">http://147.91.204.115:10060/</domain>
+
+<!--        <domain includeSubdomains="true">http://192.168.8.112:8080/</domain>-->
+
+        <!--    dodajte svoju ip adresu    -->
+        <!--    cmd -> ip config -> ipv4 iz Ethernet adapter Ethernet:   -->
+    </domain-config>
+</network-security-config>

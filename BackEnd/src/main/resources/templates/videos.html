@@ -1,0 +1,10 @@
+<html>
+<body>
+<h1>View Video</h1>
+
+<th:block th:each="video: ${videos}">
+  <a th:href="'/videos/watchVideo?postId=' + ${video.getPostId()} + '&order=' + ${video.getOrder()}" th:text="'Watch video ' +  ${video.getOrder()}"></a>
+</th:block>
+
+</body>
+</html>

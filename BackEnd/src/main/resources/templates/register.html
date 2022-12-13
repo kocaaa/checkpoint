@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>REGISTER</h1>
+
+    <form th:action="@{/api/register}" method="post" th:object="${appUser}" enctype="multipart/form-data">
+        <input type="text" th:field="*{username}" required minlength="3" maxlength="44"/>
+        <input type="email" th:field="*{email}" required minlength="3" maxlength="44"/>
+        <input type="password" class="form-control" th:field="*{password}" required minlength="8" maxlength="44"/>
+        <input type="file" name="profile_image" class="form-control" accept="image/jpeg, image/png, image/jpg"/>
+
+        <button type="submit" class="btn btn-primary">Registruj se</button>
+    </form>
+
+</body>
+</html>

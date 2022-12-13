@@ -1,0 +1,11 @@
+<html>
+<body>
+<h1>View Photos</h1>
+Post ID: <span th:text="${postId}">name</span><br>
+
+<th:block th:each="image: ${photos}">
+  <img alt="sample" th:src="*{'data:image/png;base64,'+image}" />
+</th:block>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+version: "3"
+services:
+  server:
+    build: .
+    restart: always
+    ports:
+      - 10060:8080
+    depends_on:
+      - mysqldb
+      - mongodb
+  mysqldb:
+    image: "mysql:5.7"
+    restart: always
+    ports:
+      - 10068:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpwd
+  mongodb:
+    image: "mongo:latest"
+    container_name: "mongodb"
+    ports:
+      - 10067:27017
